@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Vente de materiel industriel</title>
+    <script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script language="javascript" type="text/javascript" src="./web3.min.js"></script>
+    
+    <script language="javascript" type="text/javascript" src="ABI.js"></script>
+
+    <script language="javascript" type="text/javascript" src="./Byte_code.js"></script>
+    <script language="javascript" type="text/javascript" src="./ABI_Source.js"></script>
+  </head>
+
+  <body>
+    <center>
+      <h1>Contrat assurance</h1>
+      <div id="div_paties">
+	<p>
+	  <label> Addresse assureur :</label>
+	  <input type="text" name="na" id="na">
+	  <label> Addresse assuré :</label>
+	  <input type="text" name="nv" id="nv">
+	  <label> prix_référence :</label>
+	  <input type="text" name="npr" id="npr">
+	  <label> Nombre de mois assuré :</label>
+	  <input type="text" name="nma" id="nma">
+	  <br/>
+	  <label> Addresse evaluation :</label>
+	  <input type="text" name="ne" id="ne" value="0xB2ef051D0A964234DA655ddEA5B7BDdC8E1377C7">
+	  <label> Addresse calcul_bonus_malus :</label>
+	  <input type="text" name="ncb" id="ncb" value="0x23e2C0d391de40Eb2f5BdaD2A7Cc2c1B6502600f">
+	  
+	  <button class="new_contract">Déployer nouveau contract</button>
+	  <input type="text" name="add" id="add">
+	  <button class="go">Débuter</button>
+	</p>
+	
+	<h2>Etat contrat</h2>
+
+	<label>Responsabilitée : </label>
+	<SELECT NAME="type" ID="type">
+	  <OPTION VALUE="total">total
+	  <OPTION VALUE="partiel">partiel
+	  <OPTION VALUE="aucune">aucune
+	</SELECT>
+	
+	<div id="txStatus"></div>
+	<div id="Etat_contrat"></div>
+	
+
+	<button class="accident">Accident</button>
+	<button class="evaluer">Evaluer</button>
+	<!--<button class="lire">Lire contrat</button>-->
+	<br/><br/>
+	<div id="Validation_Litige_signature"></div>
+      </div>
+      </div>
+      <script src="init.js"></script>
+    </center>
+  </body>
+</html>
